@@ -1,0 +1,90 @@
+/*-------------BODY-----------*/
+*body{
+    margin:20px;
+    padding:20px;
+    border:0;
+   box-sizing: border-box;
+}
+
+ body{
+     /*pour que le body prenne toute la largeur et hauteur*/
+     max-width: 100vw;
+     height: 100vh;
+        /*pour metrre les elements au centre*/
+     display:flex;
+     justify-content:center;
+     background-image:url(assets/image/bureau.jpg);
+     background-size: cover;
+     font-family: sans-serif;
+     align-items: center;
+
+}
+.calculatrice{
+    display:flex;
+    flex-direction: column;
+    margin-left: 45%; 
+    padding:15px;
+    border-radius: 5px;
+    background-color:#454545;
+    border: 1px solid #3D3D3D;
+    box-shadow: 0 7px 10px rgba(0, 0,8);
+}
+.ecran{
+    width:100%;
+    height:100px;
+    background-color:#ffffff;
+    margin-bottom:10px;
+    border-radius: 5px;
+    /*pour mettre les éléments en bas a droite de l'écran puis vers le bas*/
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+    padding: 15px 15px;
+    font-size: 25px;
+
+}
+.touches{
+    display:grid;
+    /*repete 4 colonnes 50px de large*/
+    grid-template-columns:repeat(4,50px);
+    /*repete 5 lignes 50px de hauts chacune*/
+    grid-template-rows: repeat(5, 50px);
+    grid-gap: 7px;
+    background-color:#454545;
+    border: 1px solid #3D3D3D;
+    box-shadow: 0 7px 10px rgba(0, 0,8);
+    
+}
+
+button{
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    background-color:#f7f7f7;
+    box-shadow: 0 3px #a8a8a8;
+    font-size: 18px;
+}
+
+/*effet enfocement des bouttons de la calculatrice*/
+
+button:active{
+    box-shadow: 0 1px #a8a8a8;
+    transform: translateY(2px);
+}
+
+button[data-key="8"]{
+    background-color:#ff9900;
+    font-weight:bold;
+}
+
+button[data-key="13"] {
+    /*mettre une case sur 2lignes*/
+    grid-column: span 2;
+    background-color:#7CC7C7;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
